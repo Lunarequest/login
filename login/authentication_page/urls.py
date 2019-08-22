@@ -1,0 +1,7 @@
+from django.urls import path
+from . import views
+#this is the url that you need to check for login
+
+urlpatterns = [
+    path('', views.index, name='login')
+]
