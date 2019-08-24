@@ -3,5 +3,7 @@ from . import views
 #this is the url that you need to check for login
 
 urlpatterns = [
-    path('', views.index, name='login')
+    path( '', views.login, name = 'login'),
+    path('login', views.login, name = 'login'),
+   
 ]
