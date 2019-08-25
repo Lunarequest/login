@@ -18,11 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< Updated upstream
     path('login/',include('authentication_page.urls')),
     path('', include('authentication_page.urls')),
-    
-=======
-
->>>>>>> Stashed changes
+    path('logout/', include('authentication_page.urls'))
 ]
+
