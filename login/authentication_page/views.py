@@ -3,7 +3,33 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.models import auth, User
 # Create your views here.
-# an iniatl view this is what you will see when you acsess this website
+def register(request):
+    if request.method == "POST":
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        username = request.POST['username']
+        email = request.POST['email']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+        if (password1==password2):
+            if User.objects.filter(username=username).exists():
+                messages.info(request, "username taken")
+                return redirect('/register')
+            else:
+                if User.objects.filter(email=email).exists():
+                    messages.info(request, "email already used!")
+                    return redirect('/register')
+                else:
+                    user = User.objects.create_user(username=username,email=email, password=password1, first_name=first_name, last_name=last_name)
+                    user.save();
+                    messages.info(request, "please login now")
+                    return redirect("/login")
+        else:
+            messages.info(request,"passwords do not match")
+            return redirect('/register')
+    else:
+        return render(request, 'register.html')
+# login function
 def login (request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -18,6 +44,7 @@ def login (request):
     else:
         return render(request,'login.html')
 
+#logout function
 def logout(request):
     auth.logout(request)
     return redirect("")
