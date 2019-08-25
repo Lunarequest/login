@@ -21,7 +21,7 @@ def register(request):
                     return redirect('/register')
                 else:
                     user = User.objects.create_user(username=username,email=email, password=password1, first_name=first_name, last_name=last_name)
-                    user.save();
+                    user.save()
                     messages.info(request, "please login now")
                     return redirect("/login")
         else:

@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <h1>you are logged in</h1>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>logged in</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<h1>you are logged in</h1>
     <li><a href=""logout">logout</a></li>
+<body>
+    
+</body>
+<div>
+    {% for message in messages %}
+    <h3> {{message}} </h3>
+    {% endfor %}
+</div>
 </html>
