@@ -39,7 +39,7 @@ def login (request):
             auth.login(request,user)
             return render(request, 'success.html')
         else:
-            messages.info(request,'invaild login')
+            messages.info(request,'invaild credentials')
             return redirect("/login")
     else:
         return render(request,'login.html')
