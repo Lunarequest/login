@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
+        {% load static %}
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>login</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='static/main.css'>
     <script src='main.js'></script>
 </head>
 <body>
+    <div align="justify">
+    <center>         
     <form action = 'login' method="POST">
         {% csrf_token %}
         <input type="text" name="username" placeholder="username"><br>
@@ -16,6 +19,7 @@
         <input type="submit">
     </form>
     <li><a href="/register">Register if you do not have a username and password</a></li>
+    </div>
 </body>
 <div>
     {% for message in messages %}
