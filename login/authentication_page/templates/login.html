@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
+
         {% load static %}
 <head>
     <meta charset='utf-8'>
@@ -34,23 +34,5 @@
     <h3> {{message}} </h3>
     {% endfor %}
 </div>
-=======
-
-    <body>
-        <form action = 'login' method="POST">
-            {% csrf_token %}
-            <input type="text" name="username" placeholder="username"><br>
-            <input type="password" name="password" placeholder="password"><br>
-            <input type="submit">
-        </form>
-        <li><a href="/register">Register if you do not have a username and password</a></li>
-    </body>
-
-    <div>
-        {% for message in messages %}
-        <h3> {{message}} </h3>
-        {% endfor %}
-    </div>
->>>>>>> parent of c1d87a9... removed unsused folder
 </html>
     
