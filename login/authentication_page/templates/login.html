@@ -5,20 +5,27 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>login</title>
+    <meta charset="utf-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='static/main.css'>
-    <script src='main.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div align="justify">
-    <center>         
-    <form action = 'login' method="POST">
-        {% csrf_token %}
-        <input type="text" name="username" placeholder="username"><br>
-        <input type="password" name="password" placeholder="password"><br>
-        <input type="submit">
-    </form>
-    <li><a href="/register">Register if you do not have a username and password</a></li>
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <hr class="mt-0 mb-4">  
+                    <form action = 'login' method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="username" placeholder="username"><br>
+                        <input type="password" name="password" placeholder="password"><br>
+                        <input type="submit">
+                    </form>
+                        <li><a href="/register">Register if you do not have a username and password</a></li>
+            
+        
+            </div>
+        </div>
     </div>
 </body>
 <div>
