@@ -8,8 +8,8 @@
     <title>login</title>
     <meta charset="utf-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+<script src="static/js/bootstrap.js"></script>
 </head>
 <body>
     <div class="container">
@@ -20,7 +20,7 @@
                         {% csrf_token %}
                         <input type="text" name="username" placeholder="username"><br>
                         <input type="password" name="password" placeholder="password"><br>
-                        <input type="image" src = 'static/login.jpeg' alt="submit" >
+                        <input type="image" src = 'static/images/login.jpeg' alt="submit" >
                     </form>
                         <li><a href="/register">Register if you do not have a username and password</a></li>
             
