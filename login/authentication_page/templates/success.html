@@ -1,16 +1,42 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
-<head>
+<head >
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>loged in</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-    <h1>you are logged in</h1>
-    <li><a href="">logout</a></li>
+    <link rel="stylesheet" href="{% static font.min.css %}">
+    <!-- Bootstrap -->
+    <link href="{% static bootstrap.min.css %}" rel="stylesheet">
+    <!-- Material Design for Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.16/css/mdb.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="static/main.css">
+  </head>
+  <body>
+    <title>logged in</title>
+    <h1 class="animated fadeIn mb-4">You are logged in</h1>
+    </div>
+    <li><h1><a href="">logout</a></h1></li>
+    <div class="flex-center flex-column">
+        <img src="static/log.png" class="wow fadeInUp" data-wow-delay="0.6s">
+    </div>
+      <!-- jQuery -->
+    <script src="static/jquery.min.js"></script>
 
+    <!-- Popper.js -->
+    <script src="static/popper.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="static/bootstrap.min.js"></script>
+
+    <!-- Material Design for Bootstrap -->
+    <script src="static/mdb.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+  </body>
 <div>
     {% for message in messages %}
     <h3> {{message}} </h3>

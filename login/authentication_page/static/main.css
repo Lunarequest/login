@@ -1,0 +1,8 @@
+.wow {
+    visibility: hidden;
+  }
+
+ h1 a, h2 a {
+    color:red;
+    font-family: 'Lobster';
+}
