@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-{% load static %}
 <html>
+  <style>
+    body{
+      background-image: url("static/images/download.jpg");
+        background-repeat:no-repeat;
+       background-size:cover;
+      }
+  </style>
 <head >
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -13,7 +19,7 @@
     <link href="static/css/mdb.css" rel="stylesheet">    
     <link rel="stylesheet" href="static/css/main.css">
   </head>
-  <body>
+  <body >
     <title>logged in</title>
     <h1 class="animated fade fadeOut delay-2s"> hello, {{ user.get_username }}</h1>
     <h1 class="animated fadeIn mb-4 delay-3s">You are, logged in</h1>
